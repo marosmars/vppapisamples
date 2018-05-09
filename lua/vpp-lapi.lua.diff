@@ -1,0 +1,9 @@
+425c425,426
+<  int vac_connect(char *name, char *chroot_prefix, void *cb);
+---
+>  typedef void (*vac_callback_t)(unsigned char * data, int len);
+>  int vac_connect(char *name, char *chroot_prefix, vac_callback_t cb, int rx_qlen);
+695c696
+<     local ret = vpp.vac.vac_connect(vpp.c_str(client_name), nil, nil)
+---
+>     local ret = vpp.vac.vac_connect(vpp.c_str(client_name), nil, nil, 32)

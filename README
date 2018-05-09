@@ -2,4 +2,7 @@
 
 Shows how to manage VPP using:
 * C APIs
-* Java APIs (Kotlin)
+* Java APIs
+* Kotlin using Java APIs
+* Python APIs
+* LUA APIs
