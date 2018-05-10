@@ -6,3 +6,13 @@ Shows how to manage VPP using:
 * Kotlin using Java APIs
 * Python APIs
 * LUA APIs
+
+Sample L2 use case:
+* Open VPP management session
+* Show interfaces
+* Create loopback interface
+* Show interfaces
+* Show bridge domains
+* Create bridge domain
+* Show bridge domains
+* Close VPP management session
