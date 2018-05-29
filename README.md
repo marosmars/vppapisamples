@@ -1,5 +1,12 @@
 # VPP binary APIs showcase
 
+This is a collection of samples that show how VPP can be configured/managed from various languages
+The same simple use case is implemented accross the board
+
+Note that these are only samples
+
+More information on this topic can be found in [my blog post](https://www.marosmars.com/blog/category/vpp)
+
 Shows how to manage VPP using:
 * C APIs
 * Java APIs
