@@ -24,3 +24,7 @@ Sample L2 use case:
 * Create bridge domain
 * Show bridge domains
 * Close VPP management session
+
+Written for VPP version:
+**18.04**
+
