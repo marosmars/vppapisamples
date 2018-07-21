@@ -13,6 +13,7 @@ Shows how to manage VPP using:
 * Kotlin using Java APIs
 * Python APIs
 * LUA APIs
+* Golang APIs
 
 Sample L2 use case:
 * Open VPP management session
