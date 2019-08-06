@@ -330,6 +330,7 @@ int main()
     vppclient_main_t * jm = &vppclient_main;
     api_main_t * am = &api_main;
 
+    clib_mem_init (0, 128 << 20);
     // Open VPP management session under name vpp-manager
     if (vl_client_connect_to_vlib("vpe-api", "vpp-manager", 32) < 0)
         return -1;
