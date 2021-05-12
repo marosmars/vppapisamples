@@ -1,4 +1,4 @@
-# sudo apt-get install vpp-api-python
+# sudo apt-get install python3-vpp-api
 # ls /usr/share/vpp/api/
 # cat l2.api.json
 # cat interface.api.json
