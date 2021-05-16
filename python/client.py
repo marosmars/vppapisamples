@@ -1,15 +1,15 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from __future__ import print_function
-
 import os
 import fnmatch
-
-from vpp_papi import VPP
+from vpp_papi import VPPApiJSONFiles
+from vpp_papi import vpp_papi
 
 CLIENT_ID = "Vppclient"
-VPP_JSON_DIR = '/usr/share/vpp/api/'
+VPP_JSON_DIR = '/usr/share/vpp/api/core/'
 API_FILE_SUFFIX = '*.api.json'
+
 
 def load_json_api_files(json_dir=VPP_JSON_DIR, suffix=API_FILE_SUFFIX):
     jsonfiles = []
@@ -25,7 +25,7 @@ def load_json_api_files(json_dir=VPP_JSON_DIR, suffix=API_FILE_SUFFIX):
 
 
 def connect_vpp(jsonfiles):
-    vpp = VPP(jsonfiles)
+    vpp = vpp_papi.VPPApiClient(apifiles=jsonfiles)
     r = vpp.connect("CLIENT_ID")
     print("VPP api opened with code: %s" % r)
     return vpp
@@ -56,7 +56,10 @@ def create_bd():
 # Python apis need json definitions to interpret messages
 vpp = connect_vpp(load_json_api_files())
 # Dump interfaces
+"""
 dump_interfaces()
+This function is not working at the moment feel free to correct the code
+"""
 # Create loopback
 create_loopback()
 # Dump interfaces
